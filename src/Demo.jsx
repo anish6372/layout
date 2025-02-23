@@ -34,7 +34,7 @@ const chartSeries = [
 ];
 
 const Demo = () => {
-  // const [isSidebarOpen, setSidebarOpen] = useState(true);
+  
   return (
     <div className="flex h-screen bg-gray-100">
     
