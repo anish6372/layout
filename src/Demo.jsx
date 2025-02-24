@@ -12,10 +12,8 @@ const Demo = () => {
   const toggleRightSidebar = () => setIsRightSidebarOpen(!isRightSidebarOpen);
 
   return (
-    <div className="flex h-screen bg-gray-100">
-      <button className="md:hidden" onClick={toggleLeftSidebar}>
-       
-      </button>
+    <div className="flex h-screen w-full bg-gray-100">
+    
       <LeftSidebar isOpen={isLeftSidebarOpen} toggleSidebar={toggleLeftSidebar} />
       <MainContent toggleLeftSidebar={toggleLeftSidebar} toggleRightSidebar={toggleRightSidebar} />
       <button className="md:hidden" onClick={toggleRightSidebar}>
