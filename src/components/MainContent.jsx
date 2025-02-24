@@ -78,64 +78,60 @@ const MainContent = ({ toggleLeftSidebar, toggleRightSidebar }) => {
         </div>
       </div>
 
-      <div className="flex gap-6 mt-6">
-        <div className="bg-white p-6 w-[1000px] h-[450px] rounded-lg shadow-md">
-          <div className="flex space-x-8 mb-4">
-            <h3 className="text-lg font-semibold">Total Users</h3>
-            <span>Total Projects</span>
-            <span>Operating Status</span>
-            <span>|</span>
-            <span className="text-black font-bold">● Current Week</span>
-            <span className="text-blue-500 font-bold">● Previous Week</span>
-          </div>
-          <div className="h-[350px] flex justify-center items-center rounded-md">
-            <Chart
-              options={chartOptions}
-              series={chartSeries}
-              type="line"
-              height={350}
-              width="800px"
-            />
-          </div>
-
-          <div className="h-[350px]  flex justify-center items-center rounded-md">
-            <LineChart size={100} />
-          </div>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md w-[400px]">
-          <h3 className="text-lg font-semibold mb-4">Traffic by Website</h3>
-          <div className="space-y-8">
-            <div className="flex justify-between items-center">
-              <span>Google</span>
-              <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>Youtube</span>
-              <div className="w-2/3 h-2 bg-black rounded-md"></div>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>Instagram</span>
-              <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>Pinterest</span>
-              <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>Facebook</span>
-              <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>Twitter</span>
-              <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
-            </div>
-            <div className="flex justify-between items-center">
-              <span>Tumblr</span>
-              <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
-            </div>
-          </div>
-        </div>
+      <div className="flex flex-col lg:flex-row gap-6 mt-6">
+  <div className="bg-white p-6 w-[800px]  h-[400px] rounded-lg shadow-md overflow-x-auto">
+    <div className="flex space-x-8 mb-4">
+      <h3 className="text-lg font-semibold">Total Users</h3>
+      <span>Total Projects</span>
+      <span>Operating Status</span>
+      <span>|</span>
+      <span className="text-black font-bold">● Current Week</span>
+      <span className="text-blue-500 font-bold">● Previous Week</span>
+    </div>
+    <div className="h-[300px] flex justify-center items-center rounded-md">
+      <Chart
+        options={chartOptions}
+        series={chartSeries}
+        type="line"
+        height={300}
+        width="700px"
+      />
+    </div>
+  </div>
+  <div className="bg-white p-6 rounded-lg shadow-md w-full lg:w-[300px]">
+    <h3 className="text-lg font-semibold mb-4">Traffic by Website</h3>
+    <div className="space-y-8">
+      <div className="flex justify-between items-center">
+        <span>Google</span>
+        <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
       </div>
+      <div className="flex justify-between items-center">
+        <span>Youtube</span>
+        <div className="w-2/3 h-2 bg-black rounded-md"></div>
+      </div>
+      <div className="flex justify-between items-center">
+        <span>Instagram</span>
+        <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
+      </div>
+      <div className="flex justify-between items-center">
+        <span>Pinterest</span>
+        <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
+      </div>
+      <div className="flex justify-between items-center">
+        <span>Facebook</span>
+        <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
+      </div>
+      <div className="flex justify-between items-center">
+        <span>Twitter</span>
+        <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
+      </div>
+      <div className="flex justify-between items-center">
+        <span>Tumblr</span>
+        <div className="w-2/3 h-2 bg-gray-300 rounded-md"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div className="bg-white p-6 rounded-lg shadow-md">
